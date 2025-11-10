@@ -1,6 +1,8 @@
 # ===============================
 # = Server Configuration
 # ===============================
+
+
 spring.application.name=payment-service
 server.port=8080
 
