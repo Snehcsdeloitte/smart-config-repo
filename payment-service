@@ -1,32 +1,27 @@
-spring.application.name=Smartordermanagementnew
+# ===============================
+# = Server Configuration
+# ===============================
+spring.application.name=payment-service
+server.port=8080
 
-#postgres
-spring.datasource.url=jdbc:postgresql://localhost:5432/paymentdatabase
+# ===============================
+# = PostgreSQL Database Config
+# ===============================
+spring.datasource.url=jdbc:postgresql://localhost:5432/productdatabase
 spring.datasource.username=postgres
 spring.datasource.password=sneha
 spring.datasource.driver-class-name=org.postgresql.Driver
 
-# H2 & datasource (in-memory)
-#spring.datasource.url=jdbc:h2:mem:studentdb
-#spring.datasource.driverClassName=org.h2.Driver
-#spring.datasource.username=sa
-#spring.datasource.password=
-#spring.datasource.platform=h2
-
-# JPA / Hibernate
+# ===============================
+# = JPA / Hibernate Config
+# ===============================
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
-spring.jpa.properties.hibernate.format_sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
 
-# Enable H2 console (web UI)
-spring.h2.console.enabled=true
-spring.h2.console.path=/h2-console
-
-# (Optional) Change server port
-server.port=8080
+# ===============================
+# = Disable Spring Cloud Config
+# ===============================
 spring.cloud.config.enabled=false
 
-# Enable restart
-spring.devtools.restart.enabled=true
-
-springdoc.swagger-ui.path=/swagger-ui.html
+product.discount=10
